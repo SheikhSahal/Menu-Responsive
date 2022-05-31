@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+
+<HTML>
+<HEAD>
+
+<TITLE>
+MENU
+</TITLE>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(e){
+ $('.has-sub').click(function(){
+ $(this).toggleClass('tap');
+ 
+ 
+ });
+
+});
+</script>
+<style>
+*{
+padding:0;
+margin:0;
+}
+.main-nav {
+width:250px;
+background:rgba(160,193,199,1.00);
+}
+
+.main-nav li{
+list-style:none;
+}
+
+.main-nav a{
+text-decoration:none;
+display:block;
+padding:10px 0 10px 20px;
+border-bottom:1px dotted gray;
+color:white;
+}
+
+.main-nav-ul ul {
+display:none;
+}
+
+.main-nav-ul li.tap ul {
+display:block;
+}
+.main-nav .sub-arrow:after{
+content:'\203A';
+float:right;
+margin-right:20px;
+transform: rotate(90deg);
+-webkit-transform: rotate(90deg);
+-moz-transform: rotate(90deg);
+}
+
+.main-nav li.tap .sub-arrow:after{
+content:'\2039';
+}
+</style>
+
+</HEAD>
+
+
+<BODY>
+
+
+<nav class="main-nav">
+
+<ul class="main-nav-ul">
+
+<li> <a href="#">Home</a></li>
+
+<li class="has-sub"> <a href="#">About<span class="sub-arrow"></span></a>
+<ul>
+<li> <a href="#">Item1</a></li>
+<li> <a href="#">Item2</a></li>
+<li> <a href="#">Item3</a></li>
+<li> <a href="#">Item4</a></li>
+</ul>
+
+</li>
+<li> <a href="#">Contact</a></li>
+
+
+</ul>
+
+</nav>
+
+
+</BODY>
+
+</HTML>

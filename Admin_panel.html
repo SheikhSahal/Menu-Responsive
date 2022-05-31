@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+
+<HTML>
+<HEAD>
+<TITLE>
+MENU
+</TITLE>
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<meta name="viewport" content="width =device-width, initial-scale=1"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(e){
+ $('.has-sub').click(function(){
+ $(this).toggleClass('tap');
+ });
+});
+</script>
+
+<style>
+*{
+margin:0px;
+padding:0px;
+}
+
+.menu-font{
+font-family: 'Poppins', sans-serif;
+}
+#sidebar{
+position:fixed;
+width:250px;
+height:100%;
+top:90px;
+background:#ffffff;
+left:0px;
+transition: all 500ms linear;
+box-shadow: 0 15px 20px rgba(0, 0, 0, 0.9); 
+}
+
+#sidebar.active {
+left:-250px;
+box-shadow:none; 
+}
+
+
+
+#sidebar .toggle-btn{
+position:absolute;
+left:270px;
+}
+
+#sidebar .toggle-btn span{
+display:block;
+width:30px;
+height:3px;
+background:#151719;
+margin:5px 0px;
+}
+
+.pad{
+padding:1%;
+}
+
+.main-nav li{
+list-style:none;
+}
+
+.main-nav a{
+text-decoration:none;
+display:block;
+padding:10px 0 10px 20px;
+color:#555555;
+background:#ffffff;
+}
+.main-nav a:hover{
+color:#4272d7;
+text-decoration:none;
+}
+.main-nav-ul ul {
+display:none;
+}
+
+.main-nav-ul li.tap ul {
+display:block;
+transition: 0.2s;
+}
+.main-nav .sub-arrow:after{
+content:'\203A';
+float:right;
+margin-right:20px;
+transform: rotate(90deg);
+-webkit-transform: rotate(90deg);
+-moz-transform: rotate(90deg);
+}
+
+.main-nav li.tap .sub-arrow:after{
+content:'\2039';
+transition: 0.2s;
+}
+
+.icons-space{
+margin:0 15px;
+}
+
+.has-sub ul li a
+{
+padding-left:35px;
+}
+
+#wrapper{
+margin-left:320px;
+transition: all 500ms linear;
+margin-right:10%;
+margin-top:90px;
+position:relative;
+}
+
+
+#wrapper.active {
+margin-left:60px;
+transition: all 500ms linear;
+}
+
+
+.nav-control{
+display:none;
+}
+
+
+.logo
+{
+margin-left: 20px;
+margin-top: 2px;
+}
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+    body {
+        background-color: lightblue;
+    }
+	
+	#sidebar{
+	display:none;
+	}
+	
+	#wrapper{
+margin-left:15px;
+transition: all 500ms linear;
+margin-right:15px;
+margin-top:90px;
+}
+
+.nav-control{
+display:block;
+}
+}
+</style>
+</HEAD>
+
+<BODY>
+ <div class="navbar navbar-default navbar-fixed-top">
+        
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="F:\Sheikh M.sahil\.Net Software\Menu_responsive\mastplay-logo.png" width="200px" class="logo" />
+            </div>
+			<div class="container">
+           <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+				
+				<nav class="main-nav nav-control" style="background-color:#f8f8f8;">
+
+                  <ul class="main-nav-ul">
+
+						<li> <a href="#" class="menu-font"><span class="icons-space"><i class="fas fa-tachometer-alt"></i></span>Dashboard</a></li>
+
+						<li class="has-sub"> <a href="#" class="menu-font"><span class="icons-space"><i class="fas fa-cart-plus"></i></span>Add<span class="sub-arrow"></span></a>
+						<ul>
+						<li> <a href="#" class="menu-font"><span class="icons-space"><i class="fas fa-film"></i></span>Entertainment</a></li>
+						<li> <a href="#" class="menu-font"><span class="icons-space"><i class="fas fa-tags"></i></span>Category</a></li>
+						<li> <a href="#" class="menu-font"><span class="icons-space"><i class="fas fa-keyboard"></i></span>Type</a></li>
+						<li> <a href="#" class="menu-font"><span class="icons-space"><i class="fas fa-medal"></i></span>Version</a></li>
+						</ul>
+
+						</li>
+						<li><a href="#" class="menu-font"><span class="icons-space"><i class="fas fa-sign-out-alt"></i></span>Logout</a></li>
+					</ul>
+
+				</nav>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<div id="sidebar">
+<div class="toggle-btn" onclick="togglesidebar()">
+
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+
+<nav class="main-nav">
+
+<ul class="main-nav-ul">
+
+<li> <a href="#" class="menu-font"><span class="icons-space"><i class="fas fa-tachometer-alt"></i></span>Dashboard</a></li>
+
+<li class="has-sub"> <a href="#" class="menu-font"><span class="icons-space"><i class="fas fa-cart-plus"></i></span>Add<span class="sub-arrow"></span></a>
+<ul>
+<li> <a href="#" class="menu-font"><span class="icons-space"><i class="fas fa-film"></i></span>Entertainment</a></li>
+<li> <a href="#" class="menu-font"><span class="icons-space"><i class="fas fa-tags"></i></span>Category</a></li>
+<li> <a href="#" class="menu-font"><span class="icons-space"><i class="fas fa-keyboard"></i></span>Type</a></li>
+<li> <a href="#" class="menu-font"><span class="icons-space"><i class="fas fa-medal"></i></span>Version</a></li>
+</ul>
+
+</li>
+<li><a href="#" class="menu-font"><span class="icons-space"><i class="fas fa-sign-out-alt"></i></span>Logout</a></li>
+</ul>
+
+</nav>
+
+</div>
+
+<div id="wrapper">
+<p>Click on the element below to open the side navigation menu, and push this content to the right.
+  ext messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile phones, tablets, desktops/laptops, or other devices. Text messages may be sent over a cellular network, or may also be sent via an Internet connection.
+
+The term originally referred to messages sent using the Short Message Service (SMS). It has grown beyond alphanumeric text to include multimedia messages (known as MMS) containing digital images, videos, and sound content, as well as ideograms known as emoji (happy faces, sad faces, and other icons).
+
+As of 2017, text messages are used by youth and adults for personal, family and social purposes and in business. Governmental and non-governmental organizations use text messaging for communication between colleagues. As with emailing, in the 2010s, the sending of short informal messages has become an accepted part of many cultures.[1] This makes texting a quick and easy way to communicate with friends and colleagues, including in contexts where a call would be impolite or inappropriate (e.g., calling very late at night or when one knows the other person is busy with family or work activities). Like e-mail and voice mail, and unlike calls (in which the caller hopes to speak directly with the recipient), texting does not require the caller and recipient to both be free at the same moment; this permits communication even between busy individuals. Text messages can also be used to interact with automated systems, for example, to order products or services from e-commerce websites, or to participate in online contests. Advertisers and service providers use direct text marketing to send messages to mobile users about promotions, payment due dates, and other notifications instead of using postal mail, email, or voicemail.</p></p>
+
+Click on the element below to open the side navigation menu, and push this content to the right.
+  ext messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile phones, tablets, desktops/laptops, or other devices. Text messages may be sent over a cellular network, or may also be sent via an Internet connection.
+
+The term originally referred to messages sent using the Short Message Service (SMS). It has grown beyond alphanumeric text to include multimedia messages (known as MMS) containing digital images, videos, and sound content, as well as ideograms known as emoji (happy faces, sad faces, and other icons).
+
+As of 2017, text messages are used by youth and adults for personal, family and social purposes
+Click on the element below to open the side navigation menu, and push this content to the right.
+  ext messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile phones, tablets, desktops/laptops, or other devices. Text messages may be sent over a cellular network, or may also be sent via an Internet connection.
+
+The term originally referred to messages sent using the Short Message Service (SMS). It has grown beyond alphanumeric text to include multimedia messages (known as MMS) containing digital images, videos, and sound content, as well as ideograms known as emoji (happy faces, sad faces, and other icons).
+
+As of 2017, text messages are used by youth and adults for personal, family and social purposes and in business. Governmental and non-governmental organizations use text messaging for communication between colleagues. As with emailing, in the 2010s, the sending of short informal messages has become an accepted part of many cultures.[1] This makes texting a quick and easy way to communicate with friends and colleagues, including in contexts where a call would be impolite or inappropriate (e.g., calling very late at night or when one knows the other person is busy with family or work activities). Like e-mail and voice mail, and unlike calls (in which the caller hopes to speak directly with the recipient), texting does not require the caller and recipient to both be free at the same moment; this permits communication even between busy individuals. Text messages can also be used to interact with automated systems, for example, to order products or services from e-commerce websites, or to participate in online contests. Advertisers and service providers use direct text marketing to send messages to mobile users about promotions, payment due dates, and other notifications instead of using postal mail, email, or voicemail.</p></p>
+
+Click on the element below to open the side navigation menu, and push this content to the right.
+  ext messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile phones, tablets, desktops/laptops, or other devices. Text messages may be sent over a cellular network, or may also be sent via an Internet connection.
+
+The term originally referred to messages sent using the Short Message Service (SMS). It has grown beyond alphanumeric text to include multimedia messages (known as MMS) containing digital images, videos, and sound content, as well as ideograms known as emoji (happy faces, sad faces, and other icons).
+
+As of 2017, text messages are used by youth and adults for personal, family and social purposes
+</div>
+
+<script>
+
+
+function togglesidebar() {
+document.getElementById("sidebar").classList.toggle('active');
+document.getElementById("wrapper").classList.toggle('active');
+}
+</script>
+</BODY>
+
+</HTML>
